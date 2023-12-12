@@ -1,0 +1,32 @@
+GET "/" 
+--------
+Returns a simple HTML page and 200 OK
+
+
+GET "/index.html"
+---------------
+Returns the same simple HTML page and 200 OK
+
+
+GET "/google"
+-------------
+Return Permanent redirect 301 to google.com
+
+
+POST "/multiply"
+----------------
+Returns the product of a and b sent as form-encoded data and 200 ok
+IF A OR B ARE NOT INTEGERS --> 400 RESPONSE
+IF HTTP REQUEST BODY IS NOT OF THE FORM "a=¡integer¿&b=¡integer¿" --> 400 RESPONSE CODE
+
+Should look something like this: "a=123&b=456"
+
+
+DELETE "/database.php?data=all"
+-------------------------------
+Always returns a 403 Forbidden error response.
+
+
+
+ANY request to a nonexistent endpoint must recieve a 404 response code.
+Any request to a valid endpoint with the wrong HTTP method must recieve a 405 response code.

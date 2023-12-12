@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool HTML Page</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .cool-background {
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .welcome-message {
+    font-size: 2em;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+  }
+
+  .welcome-message:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2193b0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #6dd5ed;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    text-align: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #2193b0;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  footer a:hover {
+    color: #6dd5ed;
+  }
+</style>
+</head>
+<body>
+
+<div class="cool-background">
+  <div class="welcome-message" id="welcomeMessage">
+    Welcome to the Cool HTML Page!
+  </div>
+  
+  <button onclick="displayDetail()">Click me for more!</button>
+  
+  <div id="detail" style="color: white; margin-top: 20px; display: none;">
+    <p>You clicked the button! Isn't that cool?</p>
+  </div>
+</div>
+
+<footer>
+  Made with ♥ by <a href="#">Marco</a>
+</footer>
+
+<script>
+  function displayDetail() {
+    document.getElementById("detail").style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
